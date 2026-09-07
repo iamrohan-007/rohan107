@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login page</title>
+    <title>Sign in page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <div class="logo">
-            <img src="red-cart.png" alt="cart">
-            <h2>Martzone</h2>
+           &#128187 Techmart
         </div>
     <ul class="menu">
         <li><a href="#">Home</a></li>
@@ -19,5 +18,34 @@
         <li><a href="#">Contact</a></li>
     </ul>
     </nav>
+    <div class="login-box">
+        <div class="profile-icon">👤</div>
+        <h2>Welcome Back</h2>
+        <p>Please Sign in to continue</p>
+        <form action="">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="password" required>
+            <div class="options">
+                <label for="">
+                    <input type="checkbox">
+                    Remember Me
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div> 
+            <button type="submit">Login</button>
+            <div class="divider">
+                <span>OR</span>
+            </div>
+            <button class="google">Continue with Google</button>
+            <button class="facebook">Continue with Facebook</button>
+            <p class="signup">
+                Don't have an account?
+                <a href="#">Sign up</a>
+            </p>
+        </form>
+    </div>
+    <footer>
+        &copy; 2026 Martzone | All Rights Reserved
+    </footer>
 </body>
 </html>
