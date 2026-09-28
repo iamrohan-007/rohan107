@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Martzone - Login</title>
 </head>
 <body>
+    <div class="container">
     <nav>
         <div class="logo">
             MartZone
@@ -16,40 +17,42 @@
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
-        <button class="login-box">Login</button>
+        <li><a href="#" class="active">Login</a></li>
     </ul>
     </nav>
-    <div class="login-box">
-        <div class="profile-icon"></div>
+    <div class="content">
+        <div class="login-section">
         <h2>Welcome Back! &#128075;</h2>
-        <p>Sign in to continue to MartZone</p>
-        <form action="">
-            <p>Email Address</p>
-            <input type="email" placeholder=" 📧 Enter your email">
-            <p>Password</p>
-            <input type="password" placeholder=" 🔒 Enter your password">
+        <p class="subtitle">Sign in to continue to MartZone</p>
+        <form>
+            <label>Email Address</label>
+            <input type="email" placeholder=" 📧 Enter your email" required>
+            <label>Password</label>
+            <input type="password" placeholder=" 🔒 Enter your password" required>
             <div class="options">
-                <label>
+                <label class="remember">
                     <input type="checkbox">
                     Remember Me
                 </label>
                 <a href="#">Forgot Password?</a>
             </div>
-            <button type="submit">Login</button>
+            <button type="submit" class="login-button">Login</button>
             <div class="divider">
                 <span>or continue with</span>
             </div>
-            <button class="google">Google</button>
-            <button class="microsoft">Microsoft</button>
+            <div class="social-buttons">
+            <button type="button" class="social">Google</button>
+            <button type="button" class="social">Microsoft</button>
+            </div>
             <p class="signup">
                 Don't have an account?
                 <a href="#">Register</a>
             </p>
         </form>
     </div>
-    <div class="right-section">
+    <div class="welcome-section">
         <div class="illustration">
-
+            &#128274;
         </div>
     <h2>Secure, Simple, Smart.</h2>
     <p>
@@ -57,12 +60,13 @@
         for a better digital experience.
     </p>
     <div class="dots">
-        <div class="dot"></div>
-        <div class="dot acive"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+        <span class="active-dot"></span>
+        <span></span>
+        <span></span>
     </div>
     </div>
+</div>
+</div>
     <footer>
         &copy; 2026 MartZone | All Rights Reserved
     </footer>
