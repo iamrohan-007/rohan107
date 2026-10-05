@@ -24,9 +24,9 @@
         <div class="login-section">
         <h2>Welcome Back! &#128075;</h2>
         <p class="subtitle">Sign in to continue to MartZone</p>
-        <form>
+        <form onsubmit="return validateForm()">
             <label>Email Address</label>
-            <input type="email" placeholder=" 📧 Enter your email" required>
+            <input id="email1" type="email" placeholder=" 📧 Enter your email" required>
             <label>Password</label>
             <input type="password" placeholder=" 🔒 Enter your password" required>
             <div class="options">
@@ -67,8 +67,22 @@
     </div>
 </div>
 </div>
+
     <footer>
         &copy; 2026 MartZone | All Rights Reserved
     </footer>
+
+<script>
+    function validateForm(){
+    let email =  document.getElementById("email1").value;
+    let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!pattern.test(email)){
+        alert("Enter a valid email address now");
+        return false;
+    }
+    alert("Login successful!!!!");
+    return true;
+}
+</script>
 </body>
 </html>
