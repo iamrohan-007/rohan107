@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,84 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Martzone - Login</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
-    <nav>
-        <div class="logo">
-            MartZone
+        <nav>
+            <div class="logo">
+                MartZone
+            </div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="active">Login</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="login-section">
+                <h2>Welcome Back! &#128075;</h2>
+                <p class="subtitle">Sign in to continue to MartZone</p>
+
+                <form onsubmit="return validateForm()">
+                    <label for="email">Email Address</label>
+                    <input id="email" type="email" placeholder="📧 Enter your email" >
+
+                    <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="🔒 Enter your password" >
+
+                    <label for="password1">Confirm Password</label>
+                    <input id="password1" type="password" placeholder="🔒 Enter your password" >
+
+                    <label for="number">Phone Number</label>
+                    <input id="number" type="tel" placeholder="Enter your phone number" >
+
+                    <div class="options">
+                        <label class="remember">
+                            <input type="checkbox">
+                            Remember Me
+                        </label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="login-button">Login</button>
+
+                    <div class="divider">
+                        <span>or continue with</span>
+                    </div>
+
+                    <div class="social-buttons">
+                        <button type="button" class="social">Google</button>
+                        <button type="button" class="social">Microsoft</button>
+                    </div>
+
+                    <p class="signup">
+                        Don't have an account?
+                        <a href="#">Register</a>
+                    </p>
+                </form>
+            </div>
+
+            <div class="welcome-section">
+                <div class="illustration">
+                    &#128274;
+                </div>
+                <h2>Secure, Simple, Smart.</h2>
+                <p>
+                    Martzone provides secure and smart solutions <br>
+                    for a better digital experience.
+                </p>
+                <div class="dots">
+                    <span class="active-dot"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
-    <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#" class="active">Login</a></li>
-    </ul>
-    </nav>
-    <div class="content">
-        <div class="login-section">
-        <h2>Welcome Back! &#128075;</h2>
-        <p class="subtitle">Sign in to continue to MartZone</p>
-        <form onsubmit="return validateForm()">
-            <label>Email Address</label>
-            <input id="email1" type="email" placeholder=" 📧 Enter your email" required>
-            <label>Password</label>
-            <input type="password" placeholder=" 🔒 Enter your password" required>
-            <div class="options">
-                <label class="remember">
-                    <input type="checkbox">
-                    Remember Me
-                </label>
-                <a href="#">Forgot Password?</a>
-            </div>
-            <button type="submit" class="login-button">Login</button>
-            <div class="divider">
-                <span>or continue with</span>
-            </div>
-            <div class="social-buttons">
-            <button type="button" class="social">Google</button>
-            <button type="button" class="social">Microsoft</button>
-            </div>
-            <p class="signup">
-                Don't have an account?
-                <a href="#">Register</a>
-            </p>
-        </form>
     </div>
-    <div class="welcome-section">
-        <div class="illustration">
-            &#128274;
-        </div>
-    <h2>Secure, Simple, Smart.</h2>
-    <p>
-        Martzone provides secure and smart solutions <br>
-        for a better digital experience.
-    </p>
-    <div class="dots">
-        <span class="active-dot"></span>
-        <span></span>
-        <span></span>
-    </div>
-    </div>
-</div>
-</div>
 
     <footer>
         &copy; 2026 MartZone | All Rights Reserved
     </footer>
-
-<script>
-    function validateForm(){
-    let email =  document.getElementById("email1").value;
-    let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(!pattern.test(email)){
-        alert("Enter a valid email address now");
-        return false;
-    }
-    alert("Login successful!!!!");
-    return true;
-}
-</script>
 </body>
 </html>
